@@ -7,6 +7,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 ## Config DB
 DB_URL = 'postgresql+psycopg2://postgres:123@db/crudperson'
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:123@localhost:5432/crudperson'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
