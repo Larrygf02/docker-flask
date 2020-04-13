@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 flask db upgrade
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku

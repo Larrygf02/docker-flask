@@ -14,7 +14,7 @@ migrate = Migrate(app, db)
 ## Class
 class Person(db.Model):
     __tablename__ = 'persons'
-    id = db.Column(db.Integer, primary_key=True, server_default=db.text("nextval('persons_id_seq'::regclass)"))
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     edad = db.Column(db.Integer)
 
