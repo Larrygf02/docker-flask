@@ -4,8 +4,7 @@ COPY ./app /app
 WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python", "app.py"]
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku
-#RUN chmod 777 docker-entrypoint.sh
-CMD gunicorn --bind 0.0.0.0:$PORT wsgi 
-#ENTRYPOINT "docker-entrypoint.sh"
+#CMD gunicorn --bind 0.0.0.0:$PORT wsgi 
